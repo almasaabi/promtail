@@ -14,7 +14,7 @@ clients:
 
 scrape_configs:
   {% if promtail_config_scrape_configs_with_nginx|length %}
-  {{ promtail_config_scrape_configs | to_nice_yaml(indent=2) | indent(2, False) }}
+  {{ promtail_config_scrape_configs_with_nginx | to_nice_yaml(indent=2) | indent(2, False) }}
   {% endif %}
   
 
